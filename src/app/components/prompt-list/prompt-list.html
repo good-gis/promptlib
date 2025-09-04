@@ -1,0 +1,7 @@
+@for (prompt of prompts; track $index) {
+  <app-prompt-item
+    [title]="prompt.title"
+    [prompt]="prompt.prompt"
+    [forDevs]="!!prompt.for_devs"
+  ></app-prompt-item>
+}

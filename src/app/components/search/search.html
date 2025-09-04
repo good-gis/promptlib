@@ -1,0 +1,32 @@
+<tui-textfield iconEnd="@tui.search">
+  <label tuiLabel>Поиск промптов</label>
+  <input
+    placeholder="Начните вводить часть текста или названия"
+    tuiTextfield
+    [(ngModel)]="searchValue"
+    (ngModelChange)="search.emit($event)"
+  />
+  <tui-icon tuiTooltip="Возможные совпадения будут фильтроваться ниже"/>
+</tui-textfield>
+
+<div class="filter-settings">
+  @if (showButtons) {
+    @for (item of PLATFORMS; track item.key) {
+      <button
+        appearance="outline"
+        tuiButton
+        type="button"
+        size="s"
+        (click)="clickPlatform(item.key)"
+        [appearance]="selectedPlatform() === item.key ? 'primary' : 'outline'"
+      >
+        {{ item.label }}
+      </button>
+    }
+  }
+  <label tuiLabel class="toggle tui-text_body-s">
+    <input size="s" tuiSwitch type="checkbox" [(ngModel)]="hideDevs" (ngModelChange)="showDevPrompt.emit($event)"/>
+    Скрывать dev-промпты
+  </label>
+</div>
+

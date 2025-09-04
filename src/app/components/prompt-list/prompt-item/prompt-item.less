@@ -1,0 +1,36 @@
+@import '@taiga-ui/core/styles/taiga-ui-local.less';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 250px;
+  min-width: 300px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.truncate {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+}
+
+.multiline-truncate {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+}
+
+.badge {
+  .gradient(#0094cf, #24c0ff);
+
+  box-shadow: var(--tui-shadow-small);
+}

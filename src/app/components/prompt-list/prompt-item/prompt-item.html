@@ -1,0 +1,78 @@
+<div
+  class="card"
+  tuiAppearance="outline-grayscale"
+  tuiCardLarge
+>
+  <header tuiHeader>
+    <h2 tuiTitle class="truncate" [tuiHint]="title">{{ title }}</h2>
+  </header>
+
+  <tui-copy [tuiHint]="prompt" class="multiline-truncate">{{ prompt }}</tui-copy>
+
+
+  <footer class="buttons">
+    <button
+      appearance="outline"
+      iconStart="@tui.copy"
+      size="s"
+      tuiIconButton
+      type="button"
+      [style.border-radius.%]="100"
+      (click)="copy(prompt)"
+    >
+      Скопировать
+    </button>
+
+    <button
+      appearance="outline"
+      iconStart="@tui.external-link"
+      size="s"
+      tuiIconButton
+      type="button"
+      [style.border-radius.%]="100"
+      (click)="openDialog()"
+    >
+      Открыть полноэкранный просмотр
+    </button>
+
+
+    @if (showGptLink) {
+      <button
+        appearance="outline"
+        iconStart="@tui.link"
+        size="s"
+        tuiIconButton
+        type="button"
+        [style.border-radius.%]="100"
+      >
+        Открыть в сервисе GPT
+      </button>
+    }
+
+
+    @if (forDevs) {
+      <tui-badge
+        appearance="custom"
+        class="badge"
+      >
+        Для разработки
+      </tui-badge>
+    }
+  </footer>
+</div>
+
+
+<ng-template
+  let-observer
+  [(tuiDialog)]="open"
+>
+  <header tuiHeader>
+    <h2 tuiTitle>{{ title }}</h2>
+  </header>
+  <form
+    tuiForm
+    (submit.prevent)="observer.complete()"
+  >
+    <p><tui-copy>{{prompt}}</tui-copy></p>
+  </form>
+</ng-template>
