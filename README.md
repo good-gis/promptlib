@@ -1,59 +1,53 @@
-# Promptlib2
+# 📚 Библиотека промптов
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.1.
+> Коллекция полезных AI-промптов  
+> Цель проекта — сделать работу LLM понятнее, удобнее и доступнее пользователям.
 
-## Development server
+---
 
-To start a local development server, run:
+## ✨ Возможности
 
-```bash
-ng serve
-```
+- 🔎 **Поиск** по промптам и категориям
+- 🎯 **Структурированность** — легко импортировать или фильтровать
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🚀 Запуск проекта
 
 ```bash
-ng generate component component-name
+# 1. Склонируй репозиторий
+git clone https://github.com/your-username/prompt-library.git
+cd prompt-library
+
+# 2. Установи зависимости
+npm install
+
+# 3. Запусти проект локально
+npm start
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+🛠 Используемые технологии 
 
-## Building
+⚡️ Angular 20 
 
-To build the project run:
+🎨 Taiga UI 4
 
-```bash
-ng build
-```
+---
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+🤝 Как помочь проекту
 
-## Running unit tests
+✍️ Добавляйте новые промпты
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+🌐 Помогайте с переводами
 
-```bash
-ng test
-```
+🐛 Сообщайте об ошибках и неточностях
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+📜 Лицензия
 
-```bash
-ng e2e
-```
+MIT — свободно используйте и улучшайте проект 🚀
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
